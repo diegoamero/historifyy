@@ -45,10 +45,10 @@ export async function searchPatientForm(_: Request, res: Response): Promise<void
         <h2 class="pg--title">Actualizar Paciente</h2>
         <form class="form" id="form" action="" method="get" onsubmit="return submitFunction();">
         <div class="input--box">
-            <label class="form--label" for="id_document">Cédula</label>
-            <input class="form--input" type="text" id="id_document">
+            <label class="form--label" for="id_document" required >Cédula</label>
+            <input class="form--input" type="text" id="id_document" required >
         </div>    
-            <input class="submit--btn" type="submit" value="Buscar">
+            <input class="submit--btn" type="submit" value="Buscar" required >
         </form>
     </body>
     </html>
@@ -71,35 +71,35 @@ export async function createPatientForm(_: Request, res: Response): Promise<void
             <h3 class="form--title">Ingrese los datos del paciente</h3>
             <div class="input--box"> 
                 <label class="form--label" for="id_document">Cédula</label>
-                <input class="form--input" type="text" name="id_document" id="id_document">
+                <input  required class="form--input" type="text" name="id_document" id="id_document">
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="gender">Género</label>
-                <select name="gender" id="gender" class="form--input">
-                    <option value="M">Hombre</option>
-                    <option value="F">Mujer</option>
+                <select required  name="gender" id="gender" class="form--input">
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
                     <option value="X">Otro</option>
                 </select>
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="birth">Fecha de nacimiento</label>
-                <input class="form--input" type="date" name="birth" id="birth">
+                <input  required class="form--input" type="date" name="birth" id="birth">
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="fname">Nombres</label>
-                <input class="form--input" type="text" name="fname" id="fname">
+                <input  required class="form--input" type="text" name="fname" id="fname">
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="lname">Apellidos</label>
-                <input class="form--input" type="text" name="lname" id="lname">
+                <input required  class="form--input" type="text" name="lname" id="lname">
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="phone">Teléfono</label>
-                <input class="form--input" type="tel" name="phone" id="phone">
+                <input required  class="form--input" type="tel" name="phone" id="phone">
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="area">Localidad</label>
-                <select name="area" id="area" class="form--input">
+                <select  required name="area" id="area" class="form--input">
                     <option value="BAR">Barcelona</option>
                     <option value="PLC">Puerto La Cruz</option>
                     <option value="LEC">Lechería</option>
@@ -107,9 +107,9 @@ export async function createPatientForm(_: Request, res: Response): Promise<void
             </div>
             <div class="input--box"> 
                 <label class="form--label" for="patient_desc">Descripción</label>
-                <input class="form--input" type="text" name="patient_desc" id="patient_desc">
+                <input  required class="form--input" type="text" name="patient_desc" id="patient_desc">
             </div>
-            <input class="submit--btn" type="submit" value="Enviar">
+            <input  required class="submit--btn" type="submit" value="Enviar">
         </form>
     </body>
     </html>
@@ -166,8 +166,8 @@ export async function updatePatientForm(req: Request, res: Response): Promise<vo
             <div class="input--box">
             <label for="gender" class="form--label">Género</label>
             <select name="gender" id="gender" class="form--input">
-                <option value="M" ${result.gender === "M" ? "selected" : ""}>Hombre</option>
-                <option value="F" ${result.gender === "F" ? "selected" : ""}>Mujer</option>
+                <option value="M" ${result.gender === "M" ? "selected" : ""}>Masculino</option>
+                <option value="F" ${result.gender === "F" ? "selected" : ""}>Femenino</option>
                 <option value="X" ${result.gender === "X" ? "selected" : ""}>Otro</option>
             </select>
             </div>

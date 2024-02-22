@@ -9,6 +9,7 @@ import { createConsultation, createConsultationForm,
          searchConsultationForm, 
          updateConsultation, updateConsultationForm } from "./src/handlers/consultation.js"
 import { dashboard } from "./src/handlers/common.js"
+import { superuser } from "./src/handlers/superuser.js"
 import express from "express"
 import { logUser, loginForm } from "./src/handlers/user.js"
 
@@ -30,7 +31,9 @@ function main(): void {
     app.get('/:id', loginForm);  // html: formulario de inicio de sesión (reintento)
     app.post('/',    logUser);   // validación de usuario y redirección (dashboard o de vuelta a login)
 
-    
+    //Superuser
+    app.get('superuser', superuser);
+
     // CONSULTATION
     // app.get('/consultation/:id', getOneConsultation);      // futuro: html: vista de 1 consulta
     // app.get('/consultation',     getAllConsultations);     // futuro: html: vista de lista de consultas

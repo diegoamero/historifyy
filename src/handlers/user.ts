@@ -20,17 +20,17 @@ export async function loginForm(req: Request, res: Response): Promise<void> {
         </head>
         <body>
             <form action="/" method="post">
-                <h2>HISTORIFY</h2>
+                <h2 class="title">BIENVENIDO</h2>
                 <div>${isRetrying ? "failed login" : ""}</div>
                 <div class="input--container">
-                    <label for="user">USERNAME:</label>
+                    <label class="input--label" for="user">Usuario:</label>
                     <input type="text" id="user" name="username"/>
                 </div>
                 <div class="input--container">
-                    <label for="password">PASSWORD:</label>
+                    <label class="input--label"  for="password">Contraseña:</label>
                     <input type="password" id="password" name="password"/>
                 </div>
-                <input class="submit--btn" type="submit" value="Enviar">
+                <input class="submit--btn" type="submit" value="Ingresar">
             </form>
         </body>
     </html>

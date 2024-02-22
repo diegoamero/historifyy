@@ -5,9 +5,10 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    padding: 5% 35% 5% 35%;
+    padding: 5% 20%;
     box-sizing: border-box;
-    background-color: #0B6EA3;
+    background-color: #2F80ED;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -15,10 +16,9 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #0B6EA3;
+    justify-content: space-evenly;
+    background-color: #2F80ED;
     text-align: center;
-    font-size: 1.5em;
     color: #fff;
     margin: 0;
     width: 100%;
@@ -27,6 +27,7 @@ form{
     box-sizing: border-box;
     border: 0.1em solid #ccc;
     border-radius: 1em;
+    max-width: 500px;
 }
 
 .input--container{
@@ -52,29 +53,45 @@ input{
     border: 0;
     font-size: 0.7em;
     box-sizing: border-box;
+    outline: none;
+    background-color: #ffffffba;
+    transition: background-color 300ms;
+}
+
+input:focus{
+    background-color: #fff;
 }
 
 .submit--btn{
-    background-color: #0B6EA3;
+    margin-top: 15px;
+    background-color: #2F80ED;
     color: #fff;
     align-items: center;
     border: 3px solid #fff;
-    border-radius: 12px;
-    width: 84%;
+    border-radius: 1em;
+    width: 100%;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.3rem;
     transition: background, color 400ms;
 }
 
 .submit--btn:hover{
     cursor: pointer;
-    color: #0B6EA3;
+    color: #2F80ED;
     transition: background, color 400ms;
     background-color: #ccc;
-    border: 3px solid #0B6EA3;
+    border: 3px solid #2F80ED;
 }
 
 a{
     color: #ccc;
     text-decoration: none;
+}
+
+.input--label{
+    font-size: 1em;
+}
+
+.title{
+    font-size: 2em;
 }
